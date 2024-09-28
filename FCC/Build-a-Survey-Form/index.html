@@ -2,67 +2,61 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>freeCodeCamp Survey Form</title>
 </head>
 
 <body>
-
-    <!-- Page Title -->
     <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
 
-    <!-- Short Explanation -->
-    <p id="description">We would love to hear your feedback! Please fill out the survey below.</p>
-
-    <!-- Survey Form -->
     <form id="survey-form">
-
-        <!-- Name Field -->
         <label id="name-label" for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-        <!-- Email Field -->
         <label id="email-label" for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-        <!-- Number Field -->
         <label id="number-label" for="number">Age:</label>
-        <input type="number" id="number" name="age" min="10" max="100" placeholder="Enter your age" required>
+        <input type="number" id="number" name="age" min="1" max="120" placeholder="Age">
 
-        <!-- Dropdown (Select Box) -->
-        <label for="dropdown">What is your current role?</label>
+        <label id="dropdown-label" for="dropdown">Which option best describes your current role?</label>
         <select id="dropdown" name="role" required>
-            <option value="" disabled selected>Select a role</option>
+            <option value="" disabled selected>Select an option</option>
             <option value="student">Student</option>
-            <option value="teacher">Teacher</option>
-            <option value="professional">Professional</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
         </select>
 
-        <!-- Radio Buttons -->
-        <p>Would you recommend us to a friend?</p>
+        <label>Would you recommend freeCodeCamp to a friend?</label>
         <label><input type="radio" name="recommend" value="definitely" required> Definitely</label>
         <label><input type="radio" name="recommend" value="maybe"> Maybe</label>
-        <label><input type="radio" name="recommend" value="no"> No</label>
+        <label><input type="radio" name="recommend" value="not-sure"> Not sure</label>
 
-        <!-- Checkboxes -->
-        <p>What would you like to see improved? (Check all that apply)</p>
-        <label><input type="checkbox" name="improve" value="front-end"> Front-end Projects</label>
-        <label><input type="checkbox" name="improve" value="back-end"> Back-end Projects</label>
-        <label><input type="checkbox" name="improve" value="data-viz"> Data Visualization</label>
-        <label><input type="checkbox" name="improve" value="challenges"> Challenges</label>
-        <label><input type="checkbox" name="improve" value="open-source"> Open Source Community</label>
+        <label for="favorite">What is your favorite feature of freeCodeCamp?</label>
+        <select id="favorite" name="favorite" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="open-source">Open Source</option>
+        </select>
 
-        <!-- Textarea -->
+        <label>What would you like to see improved? (check all that apply)</label>
+        <div>
+            <label><input type="checkbox" name="improve" value="front-end"> Front-end Projects</label>
+            <label><input type="checkbox" name="improve" value="back-end"> Back-end Projects</label>
+            <label><input type="checkbox" name="improve" value="data-visualization"> Data Visualization</label>
+            <label><input type="checkbox" name="improve" value="challenges"> Challenges</label>
+            <label><input type="checkbox" name="improve" value="open-source"> Open Source Community</label>
+        </div>
+
         <label for="comments">Any comments or suggestions?</label>
         <textarea id="comments" name="comments" placeholder="Enter your comments here"></textarea>
 
-        <!-- Submit Button -->
         <button type="submit" id="submit">Submit</button>
-
     </form>
-
 </body>
 
 </html>
